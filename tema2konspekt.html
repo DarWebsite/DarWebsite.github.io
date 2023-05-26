@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Добро и зло - конспекты уроков</title>
+
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    @font-face{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        src:url('./fonts/Inter-Regular.woff') format('woff')
+      }
+
+    @font-face{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        src:url('./fonts/Gilroy-Regular.woff') format('woff')
+      }
+
+    @font-face{
+      font-family: 'Unbounded';
+      font-style: normal;
+      font-weight: 400;
+      src:url('./fonts/Unbounded-Regular.woff') format('woff')
+    }
+
+    @font-face{
+      font-family: 'UnboundedMedium';
+      font-style: normal;
+      font-weight: 400;
+      src:url('./fonts/Unbounded-Medium.woff') format('woff')
+    }
+
+    @font-face{
+      font-family: 'UnboundedBold';
+      font-style: normal;
+      font-weight: 400;
+      src:url('./fonts/Unbounded-Bold.woff') format('woff')
+    }
+
+    body{
+      max-width: 1920px;
+      width: 100%;
+      margin: 0 auto !important;
+
+      background: linear-gradient(180deg, #FEFEFF 0%, #EFF2FD 100%);
+
+      background-repeat: no-repeat;
+        /* background: -webkit-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: -moz-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: -ms-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: -o-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);  */
+    }
+
+      .menuitem{
+          display: flex;
+          box-sizing: border-box;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 10px;
+          margin: 5px;
+          padding: 1px;
+          border: 1px solid #A0B6C3;
+          border-radius: 20px;
+          font-family: 'Gilroy';
+          font-style: normal;
+      }
+      
+
+      .toplightbulbglyph{
+        padding-right: 30px;
+      }
+
+      .topmidparagraphtitle{
+        text-align: center;
+        font-family: 'UnboundedMedium';
+        font-style: normal;
+        color: #2A4684;
+        text-decoration: underline;
+        text-transform: capitalize;
+      }
+
+      .topmidparagraph{
+        text-align: center;
+        font-family: 'Gilroy';
+        font-style: normal;
+        color: #243976;
+      }
+
+      .multfilmiwrapper{
+        box-sizing: border-box;
+        border: solid;
+        background: radial-gradient(79.6% 85.23% at 22.68% 20.4%, rgba(231, 231, 231, 0.2) 0%, rgba(255, 255, 255, 0) 100%) 
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(138, 174, 245, 0.3);
+        backdrop-filter: blur(3px);
+        border-radius: 20px;
+        padding: 5%;
+      }
+
+      .divGlyphAbv{
+        text-align: left;
+      }
+
+      .glyph_right{
+        text-align: right;
+      }
+
+      .glyph_left{
+        text-align: left;
+      }
+
+      .topbanner{
+        padding-bottom: 20px;
+      }
+
+      .topbannermidwrapper{
+        padding-top: 10%;
+        padding-bottom: 5%;
+      }
+
+
+      .groupTitle3{
+        font-family: 'UnboundedBold';
+        font-style: normal;
+        color: #2A4684;
+        text-align: center;
+        text-decoration: underline;
+        text-transform: capitalize;
+      }
+      
+      .groupTitle3 span{
+        background-color: #FFC328;
+      }
+
+      .groupTitle32{
+        font-family: 'Unbounded';
+        font-style: normal;
+        color: #2A4684;
+        text-align: center;
+        text-decoration: underline;
+        text-transform: capitalize;
+      }
+      
+
+
+
+      .footerrow{
+        background-color: #A0B6C3;
+        padding-top: 60px;
+      }
+
+      .quicklinksheader p{
+        font-family: 'UnboundedBold';
+        font-style: normal;
+        color: #2A4684;
+        font-size: 12px;
+      }
+
+      .footerline{
+        box-sizing: border-box;
+        border-top: solid #2A4684;
+        margin-left: 12px;
+      }
+
+      .footerlink{
+        padding-top: 30px;
+        font-family: 'Inter';
+        color: #FFFFFF;
+        font-size: 11px;
+      }
+
+      .copyrighttext{
+        border-top: solid #CBCBCB;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-family: 'Inter';
+        color: #FFFFFF;
+        font-size: 8px;
+      }
+
+      .konspekt{
+        padding-top: 40%;
+        background-image: url('./images/konspektbutton.png');
+        background-repeat: no-repeat;
+        background-size: 90%;
+        background-position: center bottom;
+        text-align: center;
+      }
+
+      .konspekt .row{
+        margin-bottom: 10%;
+      }
+      .material .row{
+        margin-bottom: 10%;
+      }
+
+      .material{
+        padding-top: 40%;
+        background-image: url('./images/materialbutton.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center bottom;
+        text-align: center;
+      }
+
+      .bottomrow{
+        padding-top: 100px;
+      }
+
+      .tabletbutton a span{
+        box-sizing: border-box;
+        border-radius: 42px;
+        background: #ECF0F3;
+        box-shadow: inset -6px -4px 15px #FFFFFF, inset 4px 4px 15px #C4C4C4;
+        padding: 23px;
+        font-family: 'Gilroy';
+        font-weight: 700;
+      }
+
+      .headerClass {
+        background-image: url('./images/konspekt_elipse_left.png'), url('./images/konspekt_elipse_right.png'), url('./images/konspekt_right.png');
+        background-repeat: no-repeat;
+        background-size: 20%;
+        background-position: top left, top right, 100% 100%;
+        
+      }
+
+      .konspektrow{
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 42px;
+        box-shadow: inset -6px -4px 15px #FFFFFF, inset 4px 4px 15px #C4C4C4;
+        min-height: 100px;
+        align-items: center;
+        background-image: url('./images/wordicon.png');
+        background-repeat: no-repeat;
+        background-size: 5%;
+        background-position: 5% 50%;
+        padding-left: 5%;
+        margin-top: 50px;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <!-- <link href="./css/carousel.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div class="toppart">
+      <header class="headerClass">
+        <nav class="navbar navbar-expand">
+          <!-- Container wrapper -->
+          <div class="container-fluid">
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+              <!-- Left links -->
+              <ul class="navbar-nav">
+                
+                <li class="nav-item menuitem">
+                  <a class="nav-link" href="./index.html">Главная</a>
+                </li>
+                <li class="nav-item menuitem">
+                  <a class="nav-link" rel="noopener"  href="./index.html#stotakoe">Что такое нравственное воспитание?</a>
+                </li>
+                <li class="nav-item menuitem dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Медиаконтент
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./testirovanie.html">Тестирование</a>
+                    <a class="dropdown-item" href="./multfilmi.html">Мультфильмы</a>
+                    <a class="dropdown-item" href="./videoprichi.html">Видеопритчи</a>
+                    <a class="dropdown-item" href="./filmi.html">Фильмы</a>
+                  </div>
+                </li>
+                <li class="nav-item menuitem dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Конспекты уроков
+                  </a>
+                  <div class="dropdown-menu dropdownmenu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./sostradanie.html">Сострадание и милосердие</a>
+                    <a class="dropdown-item" href="./dobro.html">Добро и зло</a>
+                    <a class="dropdown-item" href="./uvazhenie.html">Уважение к пожилым людям</a>
+                    <a class="dropdown-item" href="./chestnost.html">Честность</a>
+                    <a class="dropdown-item" href="./otvestvenost.html">Ответственность</a>
+                  </div>
+                </li>
+                <li class="nav-item menuitem">
+                  <a class="nav-link" href="./contact.html">Обратная связь</a>
+                </li>
+
+              </ul>
+              <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+          </div>
+          <!-- Container wrapper -->
+        </nav>
+
+
+        <div class="topbanner row align-items-end">
+          <div class="col"></div>
+          <div class="col-8 topbannermidwrapper">
+            <div class="multfilmiwrapper">
+              <h3 class="groupTitle3"><span>ДОБРО И ЗЛО</span></h3>
+              <p class="groupTitle32 fs-3">КОНСПЕКТЫ УРОКОВ</p>
+            </div>
+          </div>
+          <div class="col"></div>
+      </div>
+
+      <div class="row">
+          <div class="col"></div>
+          <div class="col-8">
+            <div class="row konspektrow">
+              <a href="./material/tema2/Vezhlivost.docx">Вежливость</a> 
+            </div>
+            <div class="row konspektrow">
+              <a href="./material/tema2/Dobroserdechie.docx">Добросердечие</a> 
+            </div>
+            <div class="row konspektrow">
+              <a href="./material/tema2/Dobrota.docx">Доброта</a> 
+            </div>
+            <div class="row konspektrow">
+              <a href="./material/tema2/Druzhba.docx">Дружба</a> 
+            </div>
+            <div class="row konspektrow">
+              <a href="./material/tema2/Poisk prekrasnovo.docx">Поиск прекрасного</a> 
+            </div>
+            <div class="row konspektrow">
+              <a href="./material/tema2/Stremlenie k svetu.docx">Стремление к свету</a> 
+            </div>
+            <div class="row konspektrow">
+              <a href="./material/tema2/Umenie videt choroshoe.docx">Умение видеть хорошее</a> 
+            </div>
+            <div class="row bottomrow"></div>
+          </div>
+          <div class="col"></div>
+      </div>
+      </header>
+    </div>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    @font-face{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        src:url('./fonts/Inter-Regular.woff') format('woff')
+      }
+
+    @font-face{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        src:url('./fonts/Gilroy-Regular.woff') format('woff')
+      }
+
+    @font-face{
+      font-family: 'Unbounded';
+      font-style: normal;
+      font-weight: 400;
+      src:url('./fonts/Unbounded-Regular.woff') format('woff')
+    }
+
+    @font-face{
+      font-family: 'UnboundedMedium';
+      font-style: normal;
+      font-weight: 400;
+      src:url('./fonts/Unbounded-Medium.woff') format('woff')
+    }
+
+    @font-face{
+      font-family: 'UnboundedBold';
+      font-style: normal;
+      font-weight: 400;
+      src:url('./fonts/Unbounded-Bold.woff') format('woff')
+    }
+
+    body{
+      max-width: 1920px;
+      width: 100%;
+      margin: 0 auto !important;
+    }
+
+    /* html, body {
+        height: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background: #FFFFFF;
+         background-repeat:no-repeat;
+        background: -webkit-linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%);
+        background: -moz-linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%);
+        background: -ms-linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%);
+        background: -o-linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%);
+        background: linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%); 
+    } */
+
+      .menuitem{
+          display: flex;
+          box-sizing: border-box;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 10px;
+          margin: 5px;
+          padding: 1px;
+          border: 1px solid #A0B6C3;
+          border-radius: 20px;
+          font-family: 'Gilroy';
+          font-style: normal;
+      }
+      
+      .dropdownmenu{
+        border-radius: 20px;
+      }
+
+      .toppart{
+        display:flex;
+        max-height: 800px;
+        background-repeat:no-repeat;
+        background: -webkit-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: -moz-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: -ms-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: -o-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%); 
+      }
+
+      .topbanner{
+        background-image: url('./images/quote.png');
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: bottom 10% right;
+      }
+
+      .boyleft{
+        max-width: 100%;
+        height:auto;
+      }
+
+      .boyright{
+        max-width: 100%;
+        height:auto;
+      }
+
+      .topstarglyph{
+        padding-left: 60px;
+      }
+
+      .toplightbulbglyph{
+        padding-right: 30px;
+      }
+
+      .topmidparagraph{
+        text-align: center;
+        font-family: 'UnboundedMedium';
+        font-style: normal;
+        color: #2A4684;
+      }
+
+      .divGlyphAbv{
+        text-align: center;
+      }
+      .topabvglyph{
+        padding-right: 40px;
+      }
+
+      .headerClass {
+        background-image: url('./images/pencil_ruler_elipse.png'), url('./images/rubik_elipse.png');
+        background-repeat: no-repeat;
+        background-size: 20%;
+        background-position: top left, top right;
+        
+      }
+
+      .groupTitle{
+        box-sizing: border-box;
+      }
+      
+      .groupTitle > p{
+        background-color: #FFC328;
+        padding: 5px 10px 5px 10px;
+        font-family: 'UnboundedBold';
+        font-style: normal;
+        color: #2A4684;
+      }
+
+      .groupTitle2{
+        margin-top: -20px;
+        box-sizing: border-box;
+      }
+      
+      .groupTitle2 > p{
+        background-color: #FFC328;
+        padding: 5px 10px 5px 10px;
+        font-family: 'UnboundedBold';
+        font-style: normal;
+        color: #2A4684;
+      }
+
+      .miniTitle{
+        box-sizing: border-box;
+      }
+      
+      .miniTitle > p{
+        background-color: #FFC328;
+        padding: 5px 10px 0px 10px;
+        font-family: 'UnboundedBold';
+        font-style: normal;
+        color: #2A4684;
+        text-decoration: underline;
+      }
+
+      .midpart{
+        background-image: url('./images/otlichno_shape.png'), url('./images/mid_star.svg'), 
+        url('./images/boy_glass.png'), url('./images/boy_ball.png'),url('./images/mid_left_shape.png'), 
+        url('./images/mid_right_shape.png'), url('./images/elipse_mid_bot.png');
+        background-repeat: no-repeat;
+        background-size: 15%, 2%, 45%, 45%, 15%, 10%, 30%;
+        background-position: top right, 8% 10%, bottom left, bottom right, top left, center right, bottom center;
+      }
+
+      .midpartContent{
+        box-sizing: border-box;
+        border: 2px solid #8AAEF5;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        
+      }
+
+      .midpartContent > p{
+        margin-top: 16px;
+        font-family: 'Arial';
+        font-style: normal;
+        color: #686868;
+        text-align: center;
+      }
+      
+      .midpartContent2 > p{
+        margin-top: 10%;
+        font-family: 'Gilroy';
+        font-style: normal;
+        color: #000000;
+        text-align: center;
+        font-weight: 600;
+      }
+      
+      .midgraph{
+        max-width: 100%;
+      }
+
+      .midgraphrow{
+        padding-bottom: 30%;
+      }
+
+      .groupContent{
+        font-family: 'Arial';
+        font-style: normal;
+        color: #686868;
+        text-align: left;
+      }
+
+      .tabgroups{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding-top: 30px;
+        box-sizing: border-box;
+        background-color: #EFF2FD;
+        box-shadow: inset -9.15368px -9.15368px 18.3074px rgba(255, 255, 255, 0.7), inset 9.15368px 9.15368px 18.3074px rgba(189, 200, 223, 0.7);
+        border-radius: 25px;    
+      }
+
+      .groupnavitem{
+        font-family: 'Arial';
+        color: #2A4684;
+        font-weight: 700;
+        box-sizing: border-box;
+        background-color: #ffffff70;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
+
+      .groupnavitem button{
+        color: #2A4684 !important;
+      }
+
+      .groupnavitem button.active{
+        background-color: #9c9797 !important;
+      }
+      
+      .tabgroupsleft{
+        background-image: url('./images/bot_left_shape.png');
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: left;
+      }
+
+      .navpills{
+        padding-top: 20px;
+        box-sizing: border-box;
+        border-top: solid #CBCBCB;
+      }
+
+      .footerrow{
+        background-color: #A0B6C3;
+        padding-top: 60px;
+      }
+
+      .quicklinksheader p{
+        font-family: 'UnboundedBold';
+        font-style: normal;
+        color: #2A4684;
+        font-size: 12px;
+      }
+
+      .footerline{
+        box-sizing: border-box;
+        border-top: solid #2A4684;
+        margin-left: 12px;
+      }
+
+      .footerlink{
+        padding-top: 30px;
+        font-family: 'Inter';
+        color: #FFFFFF;
+        font-size: 11px;
+      }
+
+      .copyrighttext{
+        border-top: solid #CBCBCB;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-family: 'Inter';
+        color: #FFFFFF;
+        font-size: 8px;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <!-- <link href="./css/carousel.css" rel="stylesheet"> -->
+  </head>
+  <body>
+
+    <div class="toppart">
+      <header class="headerClass">
+
+        <nav class="navbar navbar-expand">
+          <!-- Container wrapper -->
+          <div class="container-fluid">
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+              <!-- Left links -->
+              <ul class="navbar-nav">
+                
+                <li class="nav-item menuitem">
+                  <a class="nav-link" href="./index.html">Главная</a>
+                </li>
+                <li class="nav-item menuitem">
+                  <a class="nav-link" rel="noopener" href="#stotakoe">Что такое нравственное воспитание?</a>
+                </li>
+                <li class="nav-item menuitem dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Медиаконтент
+                  </a>
+                  <div class="dropdown-menu dropdownmenu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./testirovanie.html">Тестирование</a>
+                    <a class="dropdown-item" href="./multfilmi.html">Мультфильмы</a>
+                    <a class="dropdown-item" href="./videoprichi.html">Видеопритчи</a>
+                    <a class="dropdown-item" href="./filmi.html">Фильмы</a>
+                  </div>
+                </li>
+                <li class="nav-item menuitem dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Конспекты уроков
+                  </a>
+                  <div class="dropdown-menu dropdownmenu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./sostradanie.html">Сострадание и милосердие</a>
+                    <a class="dropdown-item" href="./dobro.html">Добро и зло</a>
+                    <a class="dropdown-item" href="./uvazhenie.html">Уважение к пожилым людям</a>
+                    <a class="dropdown-item" href="./chestnost.html">Честность</a>
+                    <a class="dropdown-item" href="./otvestvenost.html">Ответственность</a>
+                  </div>
+                </li>
+                <li class="nav-item menuitem">
+                  <a class="nav-link" href="./contact.html">Обратная связь</a>
+                </li>
+              </ul>
+              <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+          </div>
+          <!-- Container wrapper -->
+        </nav>
+
+
+        <div class="topbanner d-flex">
+          <div class="topbannerleft">
+            <img src="./images/boy_left.png" class="boyleft" alt="Boy Left" id="imgBoyleft" />
+          </div>
+          <div class="topbannermid">
+            <div class="d-flex">
+              <div class="me-auto">
+                <img src="./images/glyph_star.svg" class="topstarglyph" alt="Star glyph" id="svgTopstar">
+              </div>
+              <div>
+                <img src="./images/glyph_lightbulb.svg" class="toplightbulbglyph" alt="Lightbulb glyph" id="svgToplightbulb">
+              </div>
+            </div>
+            <div>
+              <p class="topmidparagraph fs-1">"Нравственные ценности: учим юных граждан моральным качествам"</p>
+            </div>
+            <div class="divGlyphAbv">
+              <img src="./images/glyph_abv.svg" class="topabvglyph" alt="Abv glpyh" id="svgAbv">
+            </div>
+          </div>
+          <div>
+            <img src="./images/boy_right.png" class="boyright" alt="Boy Right" id="imgBoyRight" />
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="midpart">
+      <div id="stotakoe" class="groupTitle d-flex justify-content-center">
+        <p>О НРАВСТВЕННОМ ВОСПИТАНИИ</p>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="midpartContent fs-6 col-8" >
+          <p>Сделать душу живой, сострадательной, открытой миру – одна из главных целей нравственного воспитания. Заглянуть в душу каждого ребёнка, 
+            зажечь в ней свечу нравственной личности, не поддаться соблазну массового потока суеты – задача, стоящая перед школой. 
+            Развитие духовности, является важной государственной задачей, имеет исключительное значение в воспитании личности, 
+            так как именно духовность отличает человека от других живых существ. Считается, чем выше уровень духовности человека,
+            тем он более человечен. Духовный человек руководствуется идеалами истины, добра, красоты, включая в своё совершенствование волю, 
+            веру, чувственность, эмоциональность. </br>
+            Развивать культуру поведения и нравственность в современных школьниках считается одной из самых важных 
+            и актуальных задач. Ведь младший школьный возраст - время приобретения ребенком знаний, которые включают в себя усвоение общественных норм и правил, 
+            а также способов действий в различных ситуациях. 
+            Именно в начальной школе дети учатся принимать дружбу и авторитет, учитывать множество предписаний и правил.
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-6 midpartContent2">
+          <p>Нравственные качества младших школьников во многом зависят от их воспитания, взаимодействия с окружающими и участия в социальных процессах. 
+            Некоторые из самых важных нравственных качеств, которые можно наблюдать у младших школьников, включают:</p>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="midgraphrow row">
+        <div class="col"></div>
+        
+        <div class="col-9">
+          <img src="./images/mid_graph.png" class="midgraph" alt="Mid Graph" id="imgMidgraph" />
+        </div>
+        
+        <div class="col-2"></div>
+      </div>
+    </div>
+   
+    <div>
+      <div class="groupTitle2 d-flex justify-content-center">
+        <p>ВОЗМОЖНОСТИ</p>
+      </div>
+    </div>
+
+
+
+  <div class="row">
+    <div class="col tabgroupsleft"></div>
+    <div class="col-8 tabgroups">
+
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-students" role="tabpanel" aria-labelledby="pills-students-tab">
+          <div class="row">
+            <div class="col">
+              <img src="./images/bottom_group1.png" class="img-fluid float-start" alt="Students" id="groupStudents" />
+            </div>
+            <div class="col-8">
+              <div class="miniTitle d-flex justify-content-left">
+                <p>Школьники</p>
+              </div>
+              <p class="groupContent">
+                Для школьников нравственное воспитание помогает создать прочную основу моральных целей, этического мировоззрения,
+                развития характера и понимания общих ценностей человечества. Это поможет подготовить и воспитать фундамент для
+                дальнейшего развития личности ребенка в быстро меняющейся среде и внести значимый вклад в жизнь общества. Сайт обучает
+                школьников практическим жизненными знаниям, навыкам, которые помогут им стать хорошо приспособленными взрослыми.
+              </p>
+            </div>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="pills-teachers" role="tabpanel" aria-labelledby="pills-teachers-tab">
+          <div class="row">
+            <div class="col">
+              <img src="./images/bottom_group2.png" class="img-fluid float-start" alt="Teachers" id="groupTeachers" />
+            </div>
+            <div class="col-8">
+              <div class="miniTitle d-flex justify-content-left">
+                <p>Педагоги</p>
+              </div>
+              <p class="groupContent">
+                Нравственное воспитание предоставляет педагогам уникальную возможность влиять на будущее молодых поколений посредством цифровых технологий.
+                Это также позволяет им дать учащимся возможность развивать свой индивидуальный характер, развивать свою уникальную идентичность и способствовать уважению других людей. В основе сайта лежат универсальные ценности, такие как уважение, эмпатия, сотрудничество, доброта и другие. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-community" role="tabpanel" aria-labelledby="pills-community-tab">
+          <div class="row">
+            <div class="col">
+              <img src="./images/bottom_group3.png" class="img-fluid float-start" alt="Community" id="groupCommunity" />
+            </div>
+            <div class="col-8">
+              <div class="miniTitle d-flex justify-content-left">
+                <p>Педагоги</p>
+              </div>
+              <p class="groupContent">
+                Нравственное воспитание способствует вовлечению общества и служению. Опираясь на важность вклада в жизнь общества, 
+                программа направлена ​​на продвижение всесторонней, принципиальной молодежи, которая понимает свою роль в качестве членов сообщества. 
+                Он побуждает учащихся исследовать свои сообщества за пределами школы и становиться активными членами, которые ценят свою индивидуальность 
+                и независимость и ценят свою роль в качестве членов общества.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-8 navpills">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item groupnavitem" role="presentation">
+              <button class="nav-link active" id="pills-students-tab" data-bs-toggle="pill" data-bs-target="#pills-students" type="button" role="tab" aria-controls="pills-students" aria-selected="true">Школьники</button>
+            </li>
+            <li class="nav-item groupnavitem" role="presentation">
+              <button class="nav-link" id="pills-teachers-tab" data-bs-toggle="pill" data-bs-target="#pills-teachers" type="button" role="tab" aria-controls="pills-teachers" aria-selected="false">Педагоги</button>
+            </li>
+            <li class="nav-item groupnavitem" role="presentation">
+              <button class="nav-link" id="pills-community-tab" data-bs-toggle="pill" data-bs-target="#pills-community" type="button" role="tab" aria-controls="pills-community" aria-selected="false">Общество</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+
+
+      <!-- FOOTER -->
+  <footer class="row footerrow">
+    <div class="col"></div>
+    <div class="col-8">
+      <div class="quicklinksheader">    
+        <p>БЫСТРЫЕ ССЫЛКИ</p>
+      </div>
+      <div class="row">   
+        <div class="col footerline"></div> 
+        <div class="col-11"></div>
+      </div>
+      <div class="footerlink"><a class="nav-link" href="#">Что такое нравственное воспитание?</a></div>
+      <div class="footerlink"><a class="nav-link" href="#">Ресурсы программы</a></div>
+      <div class="footerlink"><a class="nav-link" href="#">Контакты</a></div>
+
+      <div class="copyrighttext">
+        <p>Copyright 2023 © Нравственное воспитание | All Rights Reserved</p>
+      </div>
+    </div>
+    <div class="col"></div>
+  </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

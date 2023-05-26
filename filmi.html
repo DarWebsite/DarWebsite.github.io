@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Фильмы</title>
+
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    @font-face{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        src:url('./fonts/Inter-Regular.woff') format('woff')
+      }
+
+    @font-face{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        src:url('./fonts/Gilroy-Regular.woff') format('woff')
+      }
+
+    @font-face{
+      font-family: 'Unbounded';
+      font-style: normal;
+      font-weight: 400;
+      src:url('./fonts/Unbounded-Regular.woff') format('woff')
+    }
+
+    @font-face{
+      font-family: 'UnboundedMedium';
+      font-style: normal;
+      font-weight: 400;
+      src:url('./fonts/Unbounded-Medium.woff') format('woff')
+    }
+
+    @font-face{
+      font-family: 'UnboundedBold';
+      font-style: normal;
+      font-weight: 400;
+      src:url('./fonts/Unbounded-Bold.woff') format('woff')
+    }
+
+    body{
+      max-width: 1920px;
+      width: 100%;
+      margin: 0 auto !important;
+
+      background: linear-gradient(360deg, #F6F8FE 29.91%, #FEFEFF 58.82%, #EFF2FD 80.46%);
+
+      background-repeat: no-repeat;
+        /* background: -webkit-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: -moz-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: -ms-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: -o-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
+        background: linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);  */
+    }
+
+      .menuitem{
+          display: flex;
+          box-sizing: border-box;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 10px;
+          margin: 5px;
+          padding: 1px;
+          border: 1px solid #A0B6C3;
+          border-radius: 20px;
+          font-family: 'Gilroy';
+          font-style: normal;
+      }
+      
+      .girlleft{
+        max-width: 100%;
+        height:auto;
+      }
+
+      .popcornright{
+        max-width: 100%;
+        height:auto;
+      }
+
+
+
+      .toplightbulbglyph{
+        padding-right: 30px;
+      }
+
+      .topmidparagraphtitle{
+        text-align: center;
+        font-family: 'UnboundedMedium';
+        font-style: normal;
+        color: #2A4684;
+        text-decoration: underline;
+        text-transform: capitalize;
+      }
+
+      .topmidparagraph{
+        text-align: center;
+        font-family: 'Gilroy';
+        font-style: normal;
+        color: #243976;
+      }
+
+      .multfilmiwrapper{
+        box-sizing: border-box;
+        border: solid;
+        background: radial-gradient(79.6% 85.23% at 22.68% 20.4%, rgba(231, 231, 231, 0.2) 0%, rgba(255, 255, 255, 0) 100%) 
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(138, 174, 245, 0.3);
+        backdrop-filter: blur(3px);
+        border-radius: 20px;
+      }
+
+      .divGlyphAbv{
+        text-align: left;
+      }
+
+      .headerClass {
+        background-image:  url('./images/girl.png'), url('./images/popcorn.png');
+        background-repeat: no-repeat;
+        background-size: 30%, 30%;
+        background-position: center left, center right;
+        padding-bottom: 10%;
+      }
+
+      .glyph_right{
+        text-align: right;
+      }
+
+      .glyph_left{
+        text-align: left;
+      }
+
+      .topbanner{
+        padding-bottom: 20px;
+      }
+
+      .movierow{
+        box-sizing: border-box;
+        box-shadow: 14px 22px 40px white;
+        border-radius: 20px;
+        border: 5px solid #4C75A3;
+        margin-top: 100px;
+        background: #ECF0F3;
+        text-align: center;
+      }
+
+      .movierow_left{
+        background-image: url('./images/film_left.png'), url('./images/film_left2.png');
+        background-repeat: no-repeat;
+        background-size: 80%, 80%;
+        background-position: left, left bottom;
+      }
+
+      .movierow_right{
+        background-image: url('./images/film_right.png'), url('./images/multifilm_boy_right.png');
+        background-repeat: no-repeat;
+        background-size: 80%, 80%;
+        background-position: right, right bottom;
+      }
+
+      .topbannermidwrapper{
+        padding-top: 10%;
+        padding-bottom: 5%;
+        background-image: url('./images/glyph_star.svg'), url('./images/mid_star.svg');
+        background-repeat: no-repeat;
+        background-size: 5%;
+        background-position: 95% top, left top;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <!-- <link href="./css/carousel.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div class="toppart">
+      <header class="headerClass">
+        <nav class="navbar navbar-expand">
+          <!-- Container wrapper -->
+          <div class="container-fluid">
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+              <!-- Left links -->
+              <ul class="navbar-nav">
+                
+                <li class="nav-item menuitem">
+                  <a class="nav-link" href="./index.html">Главная</a>
+                </li>
+                <li class="nav-item menuitem">
+                  <a class="nav-link" rel="noopener"  href="./index.html#stotakoe">Что такое нравственное воспитание?</a>
+                </li>
+                <li class="nav-item menuitem dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Медиаконтент
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./testirovanie.html">Тестирование</a>
+                    <a class="dropdown-item" href="./multfilmi.html">Мультфильмы</a>
+                    <a class="dropdown-item" href="./videoprichi.html">Видеопритчи</a>
+                    <a class="dropdown-item" href="./filmi.html">Фильмы</a>
+                  </div>
+                </li>
+                <li class="nav-item menuitem dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Конспекты уроков
+                  </a>
+                  <div class="dropdown-menu dropdownmenu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./sostradanie.html">Сострадание и милосердие</a>
+                    <a class="dropdown-item" href="./dobro.html">Добро и зло</a>
+                    <a class="dropdown-item" href="./uvazhenie.html">Уважение к пожилым людям</a>
+                    <a class="dropdown-item" href="./chestnost.html">Честность</a>
+                    <a class="dropdown-item" href="./otvestvenost.html">Ответственность</a>
+                  </div>
+                </li>
+                <li class="nav-item menuitem">
+                  <a class="nav-link" href="./contact.html">Обратная связь</a>
+                </li>
+
+              </ul>
+              <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+          </div>
+          <!-- Container wrapper -->
+        </nav>
+
+
+        <div class="topbanner row align-items-end">
+          <div class="col"></div>
+          <div class="col-6 topbannermidwrapper">
+            <div class="multfilmiwrapper">
+              <p class="topmidparagraphtitle h3">Фильмы</p>
+              <p class="topmidparagraph fs-6"> Предлагаем родителям и детям, учителям и школьникам добрые фильмы для совместного и самостоятельного просмотра. 
+                Эти фильмы вдохновляют на размышления о том, каким быть, 
+                как наилучшим образом проявлять себя в различных ситуациях, помогают формировать сильный и благородный характер.
+              </p>
+            </div>
+          </div>
+          <div class="col"></div>
+      </div>
+      </header>
+    </div>
+
+    <div class="row shortfilms">
+      <div class="col movierow_left"></div>
+      <div class="col-4">
+        <div class="row movierow">
+          <p>«Тайна железной двери», 1971</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/WBmfO2CyLVo" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>Толик Рыжов из четвертого класса случайно становится обладателем волшебных спичек: стоит только сломать одну и загадать желание, как оно сразу же сбывается. 
+            Новоиспеченный маг исполняет все свои прихоти одну за другой. Но вскоре сталкивается с настоящим хозяином спичек — волшебником, который отправляет 
+            его с друзьями на волшебный остров. 
+            Выбираться оттуда ребятам предстоит самим — и поможет им в этом не магия, а только дружба.
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«Частное пионерское», 2013</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LkzhdbrK_Fc" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>Современный российский фильм о советских школьниках. Друзья Миша и Димка активно участвуют в жизни школы, готовятся к празднику. 
+            Но один случай переворачивает все с ног на голову: Мишку спасает из реки бездомная собака. Ребята радуются псу, ставшему их верным другом. 
+            Но скоро ему самому потребуется их помощь: ребята должны придумать, как спасти нового друга с живодерни.
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«Честное волшебное», 1975</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0hQba14xTKs" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>"Честное волшебное" - советский комедийный фильм, выпущенный в 1975 году. Режиссером этого фильма был Марк Захаров.
+            Фильм рассказывает историю неудачливого московского студента Степана Маслова, который работает кролиководом в цирке. 
+            Он находится в трудном финансовом положении, так как у него нет возможности заплатить за курс лечения своей больной матери, которая живет в провинции. 
+            Степан знакомится с волшебницей Сю Кту, которая предлагает помочь ему и даже дарит ему золотой кролик. 
+            Оказывается, что кролик может по желанию превращаться в любую вещь, что Степан использует в своих целях.
+            С помощью золотого кролика Степан Маслов сначала – зарабатывает деньги, затем – помогает друзьям, пытается спасти цирк, 
+            а затем решает помочь своей матери и устроить ей лечение. В конце концов он понимает, что настоящая магия заключается не в волшебстве, 
+            а в добрых делах и взаимопонимании.
+            Фильм - это утопическая комедия о том, что с помощью доброты, настойчивости и помощи друзей невозможное становится возможным.
+             Фильм получил положительные отзывы и стал одним из культовых произведений советского кинематографа.            
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«ПОЛЛИАННА», 2003</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FGmxuCc0icI" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            Фильм «Поллианна» основан на одноименной книге Элинор Портер и прославился своей искренностью и оптимизмом. 
+            Главной героиней является девочка по имени Поллианна, которая после смерти родителей осталась сиротой и переехала к своей тете. 
+            Поллианна всегда находит положительные стороны во всем, даже в самых трудных ситуациях. Она привозит свой оптимизм в жизнь людей, 
+            которых встречает на своем пути, и благодаря своему влиянию они начинают видеть мир иначе. Фильм рассказывает о том, 
+            как важно уметь находить светлые моменты в жизни и как это может изменить судьбу любого человека.         
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«Дорога к дому», 2002</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/qaz-rXQ2Q18" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            Фильм "Дорога к дому" (англ. "The Way Home") рассказывает историю мальчика Сан, который отправляется на каникулы к своей бабушке на село. 
+            Сан не очень хочет туда ехать, он живет в большом городе и привык к другой жизни. Но после того, как он потерял свой новый бейсбольный мяч, 
+            который ему подарила мама, он начал задумываться о своем поведении и характере.
+            Во время пребывания на селе, мальчик сталкивается с трудными жизненными ситуациями вместе со своей бабушкой и местными детьми. 
+            В итоге он понимает, что сельская жизнь не такая уж и плохая, и находит друзей и истинного смысл жизни. Фильм "Дорога к дому" 
+            учит нас ценить простые вещи, находить красоту и смысл жизни в маленьких радостях и простых вещах, и не оставлять своих близких в трудную минуту.                  
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«ЗВЁЗДОЧКИ НА ЗЕМЛЕ», 2007</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/BhRxnPpTmz0" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            Фильм «Звёздочки на земле» (англ. "Taare Zameen Par") – это история об обычном мальчике-школьнике по имени Ишаан, который испытывает трудности 
+            в обучении и социальной адаптации. Ишаан страдает от дислексии, 
+            и его не могут понять ни учителя, ни одноклассники, ни родители.
+            Когда Ишаан попадает в специальную школу, где ему начинают помогать понимающие и уважающие учителя, происходит прорыв. Благодаря новым методам 
+            обучения и терпеливому отношению педагогов к мальчику, Ишаан начинает понимать, что он может добиться успеха в учебе и жизни, и что у него есть талант в рисовании.
+            Фильм «Звёздочки на земле» показывает, что каждый ребёнок уникален и не похож на другого, и что адаптация к трудностям может 
+            быть осуществлена благодаря терпению и любви родителей, а также пониманию и уважению со стороны учителей. 
+            Фильм заставляет задуматься о том, как важно обращать внимание на состояние психического 
+            здоровья детей и также развивать их таланты и интересы.                             
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«ЧАРЛИ И ШОКОЛАДНАЯ ФАБРИКА», 2005</p>
+          <iframe width="560" height="315" src="https://cloud.mail.ru/public/EFtH/Aphc6zTdz" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            Фильм "Чарли и шоколадная фабрика" (англ. "Charlie and the Chocolate Factory") - это экранизация одноименной книги Роальда Даля. 
+            Фильм рассказывает историю мальчика Чарли, который живет в бедной семье и мечтает о том, чтобы попасть на фабрику шоколада 
+            Уилли Вонки. Уилли Вонка - загадочный и эксцентричный шоколатье, который уже много лет не принимал гостей на своей фабрике. 
+            Но вновь он объявляет конкурс и выбирает пять счастливчиков, которые смогут посетить его фабрику. Чарли - один из счастливчиков.
+            Фильм полон ярких красок, невероятных приключений и неожиданной фантазии Уилли Вонки. Каждый из счастливчиков имеет свои недостатки, 
+            и на протяжении всего пути на фабрике они проходят испытания. Чарли же, благодаря своей доброте и скромности, оказывается победителем в конце концов.
+            Фильм "Чарли и шоколадная фабрика" является историей о том, что доброта, трудолюбие, самодисциплина и справедливость всегда будут вознаграждены, 
+            а также о том, как важно сохранять свои уникальные качества в мире, где все становится все более массовым и стандартизованным.                                          
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«Писатели свободы», 2005</p>
+          <iframe width="560" height="315" src="https://cloud.mail.ru/public/45ya/36cWYhG7z" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            Фильм "Писатели свободы" (англ. "Freedom Writers") - это история учительницы добровольного клуба "Дневников свободы" 
+            Эрина Грюэлл, которая работала со студентами в одной из самых опасных и рецидивных школ в Лос-Анджелесе.
+            Конфликты между расами, преступность и трудные домашние условия вынуждают молодых людей вступать в банды и жить на улицах. 
+            Эти условия, а также негативный менталитет общества делают образование несерьезной роскошью.
+            Вместо традиционных методов обучения, Эрин Грюэлл придумала непривычный метод, который позволил студентам публиковать свои 
+            мысли и чувства в дневниках, и совершенствовать письменные навыки на основе этих записей. Она использовала литературу и кинематограф 
+            как инструмент для активизации учеников. Ее метод показал результаты - ученики стали заниматься и осознавать собственное будущее, 
+            а не позволили себе стать жертвой общественных условий.
+            Фильм "Писатели свободы" - это история о том, как терпение, творческий подход и взаимодействие между учителями и учениками 
+            могут привести к успеху в образовании, при том что этот успех может проявляться не только в учебных результатов, но и в личных 
+            изменениях студентов. Фильм также показывает, что уважение, доверие и вера в потенциал каждого ученика могут 
+            оказать огромное влияние на их жизнь и будущее.
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«Мы купили зоопарк», 2011</p>
+          <iframe width="560" height="315" src="https://cloud.mail.ru/public/EuFU/Q4Lgid2XD" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            Фильм «Мы купили зоопарк» — это комедия, рассказывающая о группе друзей, которые неожиданно находят свою судьбу, купив зоопарк. 
+            Идея кажется забавной и интересной, но управление зоопарком оказывается гораздо сложнее, чем они думали. 
+            В процессе работы с зверями и проблемами, связанными с управлением бизнесом, герои переживают множество приключений и 
+            сталкиваются с незабываемыми ситуациями. Фильм исследует темы ответственности, дружбы, любви и смешных неурядиц, которые 
+            могут возникнуть в ситуации, когда ты владелец зоопарка.
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«Мост в Терабитию», 2007</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6MvVi3XQH1M" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            Фильм «Мост в Терабитию» (2007 г.) основан на одноименной книге Кэтрин Патерсон и рассказывает о двух подростках, 
+            Джессе и Лесли, которые обнаруживают в лесу старый разрушенный мост. Они принимают решение назвать его «Мостом в 
+            Терабитию» и начинают каждый день ходить туда, чтобы вместе придумывать истории об вымышленном королевстве Терабития. 
+            Но когда однажды Лесли неожиданно умирает, Джессе начинает понимать истинную силу воображения и справедливости. Фильм говорит 
+            о важности дружбы, творческой мысли и воображения, а также о том, что даже наибольшие горести могут 
+            быть преодолены, если верить в себя и любить ближнего своего.
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«Мать Терез», 2003</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hXrUbDkKWAI" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            Фильм «Мать Тереза» (2003 г.) рассказывает о жизни и деятельности известной социальной работницы и миссионерки, 
+            нобелевской лауреатки Матери Терезы. Она посвятила свою жизнь бедным и нуждающимся, особенно в Индии, 
+            где создала собственную миссию. Фильм показывает, как Мать Тереза вступает в борьбу с бедностью и нищетой, 
+            помогает больным и умирающим, и как она находит Божественную милость и любовь через свою миссию. 
+            Он отражает ее настоящую суть во всех ее трудах, чистоте и простоте мыслей и действий. Фильм является вдохновляющей историей о том, 
+            как один человек может изменить мир к лучшему, помогая нуждающимся и отображая любовь и душевную силу в действиях.
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«ОСТВИНД», 2013</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/j8G_bZeGOkY" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            «ОСТВИНД» (ВОСТОЧНЫЙ ВЕТЕР) «Оствинд» («Восточный ветер») - это норвежский фильм 2013 года, который повествует о 
+            14-летней девушке по имени Микаэла, которая переехала к своей тете в Норвегию после того, как ее мама умерла. 
+            Она находит местные лошади в стаде на летниковом пастбище и заводит близкую дружбу с дикой и непокорной кобылой 
+            по имени Оствинд. Столкнувшись с недоверием и препятствиями со стороны других жителей, Микаэла находит в себе силы 
+            бороться за свою мечту и участвует в местных конных соревнованиях. Фильм рассказывает о том, как девушка находит себя, 
+            побеждая свои страхи и преодолевая трудности на своем пути к мечте.
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«Доживём до понедельника», 1968</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YEDYKijVEmk" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            «Доживём до понедельника» - это советский комедийный фильм 1968 года. Фильм рассказывает о четырех работниках завода, которые, 
+            сбежав от своего неприятного бригадира, проводят выходные дни, надеясь "дожить до понедельника" и избежать наказания за свои проступки. 
+            Однако, в своих приключениях, они сталкиваются с множеством непредсказуемых ситуаций, которые заставляют их проявить сообразительность и 
+            изобретательность в выживании. Фильм показывает простоту и дружескую солидарность обычных людей, которые вместе могут преодолевать любые 
+            трудности и преодолевать свои проблемы.
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«Крик тишины», 2016</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ws8SPXB01Wc" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            «Крик тишины», который был снят в 2016 году и посвящен блокадному Ленинграду. Это документальный фильм, 
+            который рассказывает историю жизни и трагических событий, происходивших в городе во время блокады в 1941-1944 годах. 
+            Фильм основан на реальных свидетельствах очевидцев и воспоминаниях тех, кто пережил эти страшные события. Он показывает, 
+            как люди выживали в условиях постоянных бомбежек и голода, описывает подвиги и жертвы, совершенные горожанами в борьбе за жизнь. 
+            Фильм является глубоким и тронувшим портретом жителей Ленинграда того времени.
+          </p>
+        </div>
+        <div class="row movierow">
+          <p>«ДЕТИ ДОН КИХОТА», 1965</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/64LWsl-HfOA" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+          <p>
+            "Дети Дон Кихота" - советский приключенческий фильм, выпущенный в 1965 году. 
+            Режиссером этого фильма был Евгений Карелов.
+            Фильм повествует о жизни группы ребят в одной из пригородных деревень Москвы. 
+            Эти дети создают свой мир, похожий на средневековую феодальную страну, с ролью исследователя, ордена, замка и рыцарей.
+            В основе фильма лежит идея, что дети - это главные герои практически во всех своих приключениях и что взрослые не 
+            способны по-настоящему понимать их желания и потребности.
+            Фильм поднимает важные темы, такие как дружба, свобода, творчество, справедливость и смелость. 
+            Образы главных героев показывают, что важен не только результат, но и процесс, который должен быть прожит с полной отдачей и страстью.
+            Персонажи фильма - это настоящие дети, в ролях которых снялись юные актеры, что добавляет произведению дополнительной искренности 
+            и неподдельности. Фильм получил широкое признание у зрителей и стал одним из культовых произведений советского кинематографа.
+          </p>
+        </div>
+      </div>
+      <div class="col movierow_right"></div>
+    </div>
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
