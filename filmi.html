@@ -173,6 +173,43 @@
         background-position: 95% top, left top;
       }
 
+      .footerrow{
+margin-top: 5%;
+        background-color: #A0B6C3;
+        padding-top: 60px;
+      }
+
+      .quicklinksheader p{
+        font-family: 'UnboundedBold';
+        font-style: normal;
+        color: #2A4684;
+        font-size: 12px;
+      }
+
+      .footerline{
+        box-sizing: border-box;
+        border-top: solid #2A4684;
+        margin-left: 12px;
+      }
+
+      .footerlink{
+        padding-top: 30px;
+        font-family: 'Inter';
+        color: #FFFFFF;
+        font-size: 11px;
+      }
+
+      .copyrighttext{
+        border-top: solid #CBCBCB;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-family: 'Inter';
+        color: #FFFFFF;
+        font-size: 8px;
+      }
+
     </style>
 
     
@@ -232,7 +269,7 @@
         </nav>
 
 
-        <div class="topbanner row align-items-end">
+        <div class="topbanner row align-items-end" id="filmsbanner">
           <div class="col"></div>
           <div class="col-6 topbannermidwrapper">
             <div class="multfilmiwrapper">
@@ -473,7 +510,27 @@
     </div>
 
 
+  <!-- FOOTER -->
+  <footer class="row footerrow">
+    <div class="col"></div>
+    <div class="col-8">
+      <div class="quicklinksheader">    
+        <p>БЫСТРЫЕ ССЫЛКИ</p>
+      </div>
+      <div class="row">   
+        <div class="col footerline"></div> 
+        <div class="col-11"></div>
+      </div>
+      <div class="footerlink"><a class="nav-link" href="./index.html#stotakoe">Что такое нравственное воспитание?</a></div>
+      <div class="footerlink"><a class="nav-link" href="#filmsbanner">Медиаконтент</a></div>
+      <div class="footerlink"><a class="nav-link" href="./contact.html">Контакты</a></div>
 
+      <div class="copyrighttext">
+        <p>Copyright 2023 © Нравственное воспитание | All Rights Reserved</p>
+      </div>
+    </div>
+    <div class="col"></div>
+  </footer>
 
 
     <script src="./js/bootstrap.bundle.min.js"></script>

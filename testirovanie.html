@@ -159,6 +159,58 @@
         background-position: 95% top, left top;
       }
 
+      .footerrow{
+margin-top: 5%;
+        background-color: #A0B6C3;
+        padding-top: 60px;
+      }
+
+      .quicklinksheader p{
+        font-family: 'UnboundedBold';
+        font-style: normal;
+        color: #2A4684;
+        font-size: 12px;
+      }
+
+      .footerline{
+        box-sizing: border-box;
+        border-top: solid #2A4684;
+        margin-left: 12px;
+      }
+
+      .footerlink{
+        padding-top: 30px;
+        font-family: 'Inter';
+        color: #FFFFFF;
+        font-size: 11px;
+      }
+
+      .copyrighttext{
+        border-top: solid #CBCBCB;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-family: 'Inter';
+        color: #FFFFFF;
+        font-size: 8px;
+      }
+
+      .konspektrow{
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 42px;
+        box-shadow: inset -6px -4px 15px #FFFFFF, inset 4px 4px 15px #C4C4C4;
+        min-height: 100px;
+        align-items: center;
+        background-image: url('./images/wordicon.png');
+        background-repeat: no-repeat;
+        background-size: 5%;
+        background-position: 5% 50%;
+        padding-left: 5%;
+        margin-top: 50px;
+      }
+
     </style>
 
     
@@ -235,17 +287,43 @@
       </header>
     </div>
 
-    <div class="row shortfilms">
-      <div class="col movierow_left"></div>
+    <div class="row">
+      <div class="col"></div>
       <div class="col-8">
-        <div class="row movierow">
-          <iframe width="1020" height="630" src="https://www.youtube.com/embed/3-ZUn6z4rWo" title="YouTube video player" 
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen></iframe>
+        <div class="row konspektrow">
+          <a href="./material/tests/Test1.docx">Диагностика уровня развития нравственных качеств у младших школьников</a> 
         </div>
+        <div class="row konspektrow">
+          <a href="./material/tests/Test2.docx">Диагностика нравсвтенных основ личности</a> 
+        </div>
+        <div class="row bottomrow"></div>
       </div>
-      <div class="col movierow_right"></div>
+      <div class="col"></div>
     </div>
+
+
+
+        <!-- FOOTER -->
+        <footer class="row footerrow">
+          <div class="col"></div>
+          <div class="col-8">
+            <div class="quicklinksheader">    
+              <p>БЫСТРЫЕ ССЫЛКИ</p>
+            </div>
+            <div class="row">   
+              <div class="col footerline"></div> 
+              <div class="col-11"></div>
+            </div>
+            <div class="footerlink"><a class="nav-link" href="./index.html#stotakoe">Что такое нравственное воспитание?</a></div>
+            <div class="footerlink"><a class="nav-link" href="./filmi.html">Медиаконтент</a></div>
+            <div class="footerlink"><a class="nav-link" href="./contact.html">Контакты</a></div>
+      
+            <div class="copyrighttext">
+              <p>Copyright 2023 © Нравственное воспитание | All Rights Reserved</p>
+            </div>
+          </div>
+          <div class="col"></div>
+        </footer>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
