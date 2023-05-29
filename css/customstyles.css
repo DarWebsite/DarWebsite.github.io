@@ -1,282 +1,54 @@
 @font-face{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    src:url('./fonts/Inter-Regular.woff') format('woff')
-  }
-
-@font-face{
-    font-family: 'Gilroy';
-    font-style: normal;
-    font-weight: 400;
-    src:url('./fonts/Gilroy-Regular.woff') format('woff')
-  }
-
-@font-face{
-  font-family: 'Unbounded';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src:url('./fonts/Unbounded-Regular.woff') format('woff')
+  src:url('../fonts/Inter-Regular.woff') format('woff')
+}
+
+
+@font-face{
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  src:url('../fonts/Gilroy-Regular.woff') format('woff')
 }
 
 @font-face{
-  font-family: 'UnboundedMedium';
-  font-style: normal;
-  font-weight: 400;
-  src:url('./fonts/Unbounded-Medium.woff') format('woff')
+font-family: 'Unbounded';
+font-style: normal;
+font-weight: 400;
+src:url('../fonts/Unbounded-Regular.woff') format('woff')
 }
 
 @font-face{
-  font-family: 'UnboundedBold';
+font-family: 'UnboundedMedium';
+font-style: normal;
+font-weight: 400;
+src:url('../fonts/Unbounded-Medium.woff') format('woff')
+}
+
+@font-face{
+font-family: 'UnboundedBold';
+font-style: normal;
+font-weight: 400;
+src:url('../fonts/Unbounded-Bold.woff') format('woff')
+}
+
+.menuitem{
+  box-sizing: border-box;
+  flex-direction: row;
+  gap: 10px;
+  margin: 5px;
+  padding: 1px;
+  border: 1px solid #A0B6C3;
+  border-radius: 20px;
+  font-family: 'Gilroy';
   font-style: normal;
-  font-weight: 400;
-  src:url('./fonts/Unbounded-Bold.woff') format('woff')
+  justify-content: center;
+  text-align: center;
+  background-color: #FFFFFFAA;
 }
 
-body{
-  max-width: 1920px;
-  width: 100%;
-  margin: 0 auto !important;
+.navbar-toggler{
+  background-color: #FFFFFF;
 }
-
-/* html, body {
-    height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background: #FFFFFF;
-     background-repeat:no-repeat;
-    background: -webkit-linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%);
-    background: -moz-linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%);
-    background: -ms-linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%);
-    background: -o-linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%);
-    background: linear-gradient( to left top, #FEFEFF 0%, #EFF2FD 100%); 
-} */
-
-  .menuitem{
-      display: flex;
-      box-sizing: border-box;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 10px;
-      margin: 5px;
-      padding: 1px;
-      border: 1px solid #A0B6C3;
-      border-radius: 20px;
-      font-family: 'Gilroy';
-      font-style: normal;
-  }
-  
-  .toppart{
-    display:flex;
-    max-height: 800px;
-    background-repeat:no-repeat;
-    background: -webkit-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
-    background: -moz-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
-    background: -ms-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
-    background: -o-linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%);
-    background: linear-gradient( to left top, #FEFEFF 100%, #EFF2FD 100%); 
-
-  }
-
-  .boyleft{
-    max-width: 100%;
-    height:auto;
-  }
-
-  .boyright{
-    max-width: 100%;
-    height:auto;
-  }
-
-  .topstarglyph{
-    padding-left: 60px;
-  }
-
-  .toplightbulbglyph{
-    padding-right: 30px;
-  }
-
-  .topmidparagraph{
-    text-align: center;
-    font-family: 'UnboundedMedium';
-    font-style: normal;
-    color: #2A4684;
-  }
-
-  .divGlyphAbv{
-    text-align: center;
-  }
-  .topabvglyph{
-    padding-right: 40px;
-  }
-
-  .headerClass {
-    background-image: url('./images/pencil_ruler_elipse.png'), url('./images/rubik_elipse.png');
-    background-repeat: no-repeat;
-    background-size: 20%;
-    background-position: top left, top right;
-    
-  }
-
-  .groupTitle{
-    box-sizing: border-box;
-  }
-  
-  .groupTitle > p{
-    background-color: #FFC328;
-    padding: 5px 10px 5px 10px;
-    font-family: 'UnboundedBold';
-    font-style: normal;
-    color: #2A4684;
-  }
-
-  .groupTitle2{
-    margin-top: -20px;
-    box-sizing: border-box;
-  }
-  
-  .groupTitle2 > p{
-    background-color: #FFC328;
-    padding: 5px 10px 5px 10px;
-    font-family: 'UnboundedBold';
-    font-style: normal;
-    color: #2A4684;
-  }
-
-  .miniTitle{
-    box-sizing: border-box;
-  }
-  
-  .miniTitle > p{
-    background-color: #FFC328;
-    padding: 5px 10px 0px 10px;
-    font-family: 'UnboundedBold';
-    font-style: normal;
-    color: #2A4684;
-    text-decoration: underline;
-  }
-
-  .midpart{
-    background-image: url('./images/otlichno_shape.png'), url('./images/mid_star.svg'), 
-    url('./images/boy_glass.png'), url('./images/boy_ball.png'),url('./images/mid_left_shape.png'), 
-    url('./images/mid_right_shape.png'), url('./images/elipse_mid_bot.png');
-    background-repeat: no-repeat;
-    background-size: 15%, 2%, 30%, 30%, 15%, 10%, 30%;
-    background-position: top right, 8% 10%, bottom left, bottom right, top left, center right, bottom center;
-  }
-
-  .midpartContent{
-    box-sizing: border-box;
-    border: 2px solid #8AAEF5;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-  }
-
-  .midpartContent > p{
-    font-family: 'Arial';
-    font-style: normal;
-    color: #686868;
-    text-align: center;
-  }
-  
-  .midpartContent2 > p{
-    font-family: 'Gilroy';
-    font-style: normal;
-    color: #000000;
-    text-align: center;
-    font-weight: 600;
-  }
-  
-  .midgraph{
-    max-width: 100%;
-  }
-
-  .midgraphrow{
-    padding-bottom: 300px;
-  }
-
-  .groupContent{
-    font-family: 'Arial';
-    font-style: normal;
-    color: #686868;
-    text-align: left;
-  }
-
-  .tabgroups{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding-top: 30px;
-    box-sizing: border-box;
-    background-color: #EFF2FD;
-    box-shadow: inset -9.15368px -9.15368px 18.3074px rgba(255, 255, 255, 0.7), inset 9.15368px 9.15368px 18.3074px rgba(189, 200, 223, 0.7);
-    border-radius: 25px;    
-  }
-
-  .groupnavitem{
-    font-family: 'Arial';
-    color: #2A4684;
-    font-weight: 700;
-    box-sizing: border-box;
-    background-color: #ffffff70;
-    border-radius: 10px;
-    margin-right: 20px;
-  }
-
-  .groupnavitem button{
-    color: #2A4684 !important;
-  }
-
-  .groupnavitem button.active{
-    background-color: #9c9797 !important;
-  }
-  
-  .tabgroupsleft{
-    background-image: url('./images/bot_left_shape.png');
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: left;
-  }
-
-  .navpills{
-    padding-top: 20px;
-    box-sizing: border-box;
-    border-top: solid #CBCBCB;
-  }
-
-  .footerrow{
-margin-top: 5%;
-    background-color: #A0B6C3;
-    padding-top: 60px;
-  }
-
-  .quicklinksheader p{
-    font-family: 'UnboundedBold';
-    font-style: normal;
-    color: #2A4684;
-    font-size: 12px;
-  }
-
-  .footerline{
-    box-sizing: border-box;
-    border-top: solid #2A4684;
-  }
-
-  .footerlink{
-    padding-top: 30px;
-    font-family: 'Inter';
-    color: #FFFFFF;
-    font-size: 11px;
-  }
-
-  .copyrighttext{
-    border-top: solid #CBCBCB;
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-family: 'Inter';
-    color: #FFFFFF;
-    font-size: 8px;
-  }
