@@ -121,42 +121,40 @@
       }
 
       .konspekt{
-        padding-top: 40%;
         background-image: url('./images/konspektbutton.png');
         background-repeat: no-repeat;
         background-size: 90%;
         background-position: center bottom;
         text-align: center;
-      }
-
-      .konspekt .row{
-        margin-bottom: 10%;
-      }
-      .material .row{
-        margin-bottom: 10%;
+        font-size: calc(5% + 0.5vw + 1vh);
+        padding-top: calc(10% - 1vw + 40vh);
       }
 
       .material{
-        padding-top: 40%;
         background-image: url('./images/materialbutton.png');
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center bottom;
         text-align: center;
-      }
-
-      .bottomrow{
-        padding-top: 100px;
+        font-size: calc(5% + 0.5vw + 1vh);
+        padding-top: calc(10% - 1vw + 40vh);
       }
 
       .tabletbutton a span{
+        font-family: 'Gilroy';
+        font-weight: 700;
+      }
+
+      .tabletbutton{
+        margin-bottom: calc(4% + 0.5vw + 1vh);
+      }
+
+      .tabletbuttoncol{
+        padding: 4%;
         box-sizing: border-box;
         border-radius: 42px;
         background: #ECF0F3;
         box-shadow: inset -6px -4px 15px #FFFFFF, inset 4px 4px 15px #C4C4C4;
-        padding: 23px;
-        font-family: 'Gilroy';
-        font-weight: 700;
       }
 
       .headerClass {
@@ -165,13 +163,9 @@
         background-size: 30%, 20%, 20%;
         background-position: top left, top left, top right;
       }
-   
-      
-    </style>
 
-    
-    <!-- Custom styles for this template -->
-    <!-- <link href="./css/carousel.css" rel="stylesheet"> -->
+
+    </style>
   </head>
   <body>
     <div class="toppart">
@@ -244,20 +238,27 @@
 
       <div class="row">
           <div class="col"></div>
-          <div class="col-8">
+          <div class="col-10 col-md-10 col-lg-8">
             <div class="row">
-              <div class="col-6 konspekt">
+              <div class="col-12 col-md-6 konspekt">
                 <div class="row tabletbutton">
-                  <a class="nav-link" href="./tema1konspekt.html"><span>КОНСПЕКТЫ УРОКОВ</span></a>
+                  <div class="col"></div>
+                  <div class="col-8 tabletbuttoncol">
+                    <a class="nav-link" href="./tema1konspekt.html"><span>КОНСПЕКТЫ УРОКОВ</span></a>
+                  </div>
+                  <div class="col"></div>
                 </div>
               </div>
-              <div class="col-6 material">
+              <div class="col-12 col-md-6 material">
                 <div class="row tabletbutton">
-                  <a class="nav-link" href="./tema1material.html"><span>ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ</span></a>
+                  <div class="col"></div>
+                  <div class="col-8 tabletbuttoncol">
+                    <a class="nav-link" href="./tema1material.html"><span>ДОПОЛНИТЕЛЬНЫЕ МАТЕРИАЛЫ</span></a>
+                  </div>
+                  <div class="col"></div>
                 </div>
               </div>
             </div>
-            <div class="row bottomrow"></div>
           </div>
           <div class="col"></div>
       </div>
